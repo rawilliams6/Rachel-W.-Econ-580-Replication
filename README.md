@@ -32,8 +32,33 @@ The goal of this project is to replicate table 1, Table 2, and Figure 1 using th
 ## Data
 
 All data used in this project comes from the official replication materials associated with Wu (2020). No additional data cleaning beyond what is required to load the provided files was performed.
+## Note on Data Access
 
----
+Due to GitHub file size limits, the full dataset "gendered_posts.csv" and “X_word_count.npz”
+is not included in this repository.
+
+Please download the official replication data from the original Wu (2018)
+replication package and place the files in the project root directory
+before running the scripts.
+
+## All Data used (solely "vocab10k.csv", "keys_to_X.csv", and "trends_stas.csv" included in this package per note above)	
+1. “gendered_posts.csv”:	
+- a	dataset	of	Female/Male	posts	identified	from	the	four-year	sample	of	EJMR	
+data.	
+2. “vocab10K.csv”:	
+- a	list	of	the	most	frequent	10,000	words	that	emerge	from	2.2	million	posts	from	
+Oct	2013	to	Oct	2017,	and	each’s	marginal	probability	on	a	post	discussing	a	
+female	from	the	Lasso	models.	
+3. “X_word_count.npz”
+- this	file	contains	a	matrix	that	records	the	number	of	occurrences	of	each	word	
+from	the	most	frequent	10,000	words	in	each	post.	This	matrix	is	called	in	the	
+python	programs	for	logistic/linear	Lasso	models.	
+4. “keys_to_X.csv”
+- this	file	contains	unique	identifiers	for	each	post	in	each	thread	(title_id	and	
+post_id)	in	the	Same order	as	the	matrix of	word	counts	saved	in	the	.npz	
+format. Useful	for	merging in	the	python	programs	below.	
+5. “trend_stats.csv”
+- monthly	summary	stats	for	Figure	1
 
 ## Requirements
 
@@ -56,33 +81,6 @@ pip install pandas numpy scikit-learn statsmodels matplotlib
 - FullLasso.py – replication of LASSO results
 - OLSExample.py – OLS comparison results
 - TablesAndFigures.py – table and figure generation
-## Note on Data Access
-
-Due to GitHub file size limits, the full dataset `gendered_posts.csv`
-is not included in this repository.
-
-Please download the official replication data from the original Wu (2018)
-replication package and place the files in the project root directory
-before running the scripts.
-
-## All Data used (included except "gendered_posts.csv" per note above)	
-1. “gendered_posts.csv”:	
-- a	dataset	of	Female/Male	posts	identified	from	the	four-year	sample	of	EJMR	
-data.	
-2. “vocab10K.csv”:	
-- a	list	of	the	most	frequent	10,000	words	that	emerge	from	2.2	million	posts	from	
-Oct	2013	to	Oct	2017,	and	each’s	marginal	probability	on	a	post	discussing	a	
-female	from	the	Lasso	models.	
-3. “X_word_count.npz”
-- this	file	contains	a	matrix	that	records	the	number	of	occurrences	of	each	word	
-from	the	most	frequent	10,000	words	in	each	post.	This	matrix	is	called	in	the	
-python	programs	for	logistic/linear	Lasso	models.	
-4. “keys_to_X.csv”
-- this	file	contains	unique	identifiers	for	each	post	in	each	thread	(title_id	and	
-post_id)	in	the	Same order	as	the	matrix of	word	counts	saved	in	the	.npz	
-format. Useful	for	merging in	the	python	programs	below.	
-5. “trend_stats.csv”
-- monthly	summary	stats	for	Figure	1
 
 
 ## Instructions to Run
