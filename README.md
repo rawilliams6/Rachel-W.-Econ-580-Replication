@@ -56,15 +56,23 @@ pip install pandas numpy scikit-learn statsmodels matplotlib
 - FullLasso.py – replication of LASSO results
 - OLSExample.py – OLS comparison results
 - TablesAndFigures.py – table and figure generation
+## Note on Data Access
 
-## Data used	
+Due to GitHub file size limits, the full dataset `gendered_posts.csv`
+is not included in this repository.
+
+Please download the official replication data from the original Wu (2018)
+replication package and place the files in the project root directory
+before running the scripts.
+
+## All Data used (included except "gendered_posts.csv" per note above)	
 1. “gendered_posts.csv”:	
 - a	dataset	of	Female/Male	posts	identified	from	the	four-year	sample	of	EJMR	
-data.	Please	see	the	codebook	on	page	2 for	details.	
+data.	
 2. “vocab10K.csv”:	
 - a	list	of	the	most	frequent	10,000	words	that	emerge	from	2.2	million	posts	from	
 Oct	2013	to	Oct	2017,	and	each’s	marginal	probability	on	a	post	discussing	a	
-female	from	the	Lasso	models.	Please	see	the	codebook	on	page	3	for	details.
+female	from	the	Lasso	models.	
 3. “X_word_count.npz”
 - this	file	contains	a	matrix	that	records	the	number	of	occurrences	of	each	word	
 from	the	most	frequent	10,000	words	in	each	post.	This	matrix	is	called	in	the	
@@ -75,6 +83,7 @@ post_id)	in	the	Same order	as	the	matrix of	word	counts	saved	in	the	.npz
 format. Useful	for	merging in	the	python	programs	below.	
 5. “trend_stats.csv”
 - monthly	summary	stats	for	Figure	1
+
 
 ## Instructions to Run
 1. Install required packages:
