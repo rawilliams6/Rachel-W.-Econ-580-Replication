@@ -92,7 +92,7 @@ pip install pandas numpy scikit-learn statsmodels matplotlib
    - OLSExample.py
    - FullLasso.py
    - TablesAndFigures.py
-
+````markdown
 ## Author
 Rachel Williams  
 University of Wisconsin–Madison
